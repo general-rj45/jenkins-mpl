@@ -1,18 +1,15 @@
-def call(body) {
+def call(body, String myVariable) {
   def MPL = MPLPipelineConfig(body, [
     agent_label: '',
-    variables: '',
   ])
   pipeline {
     agent {
       label MPL.agentLabel
     }
     stages {
-      stage('Test') {
+      stage( 'Test' ) {
         steps {
-          script {
-            sh "echo '${MPL.variables}'"
-          }
+          sh "echo 'test'"
         }
       }
     }
