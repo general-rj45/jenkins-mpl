@@ -9,7 +9,7 @@ def call(body) {
     stages {
       stage( 'Test' ) {
         steps {
-          sh "echo ${CFG}.'appName'"
+          println(CFG.'appName')
         }
       }
     }
