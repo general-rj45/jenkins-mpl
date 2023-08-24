@@ -1,21 +1,10 @@
-def call(body) {
-  def MPL = MPLPipelineConfig(body, [
-    agent_label: '',
-    modules: [
-      Test: [:],
-    ]
-  ])
-
-  pipeline {
-    agent {
-      label MPL.agentLabel
-    }
+pipeline {
+    agent any
     stages {
-      stage( 'Test' ) {
-        steps {
-          sh "echo 'lol'"
+        stage('Test') {
+            steps {
+                sh "echo 'lol'"
+            }
         }
-      }
     }
-  }
 }
