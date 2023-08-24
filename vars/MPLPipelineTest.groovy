@@ -9,7 +9,7 @@ def call(body) {
     stages {
       stage( 'Test' ) {
         steps {
-          sh "echo 'lol'"
+          sh "env"
         }
       }
     }
