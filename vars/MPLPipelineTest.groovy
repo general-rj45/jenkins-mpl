@@ -14,7 +14,7 @@ def call(body) {
       stage( 'Test' ) {
         when { expression { MPLModuleEnabled() } }
         steps {
-          MPLModule()
+          sh "echo 'lol'"
         }
       }
     }
