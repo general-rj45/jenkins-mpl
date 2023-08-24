@@ -8,9 +8,11 @@ def call(body) {
       label MPL.agentLabel
     }
     stages {
-      stage( 'Test' ) {
+      stage('Test') {
         steps {
-          sh "echo '${variables}'"
+          script {
+            sh "echo '${MPL.variables}'"
+          }
         }
       }
     }
