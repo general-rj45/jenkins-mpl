@@ -2,7 +2,7 @@ def call(body) {
   def MPL = MPLPipelineConfig(body, [
     agent_label: '',
     modules: [
-      Checkout: [:],
+      Test: [:],
     ]
   ])
 
@@ -10,11 +10,8 @@ def call(body) {
     agent {
       label MPL.agentLabel
     }
-    options {
-      skipDefaultCheckout(true)
-    }
     stages {
-      stage( 'Checkout' ) {
+      stage( 'Test' ) {
         when { expression { MPLModuleEnabled() } }
         steps {
           MPLModule()
