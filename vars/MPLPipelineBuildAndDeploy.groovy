@@ -1,4 +1,4 @@
-def call(body) {
+def call(body, String myVariable) {
   def MPL = MPLPipelineConfig(body, [
     agent_label: '',
   ])
@@ -9,9 +9,10 @@ def call(body) {
     stages {
       stage( 'Test' ) {
         steps {
-          sh "echo 'lol'"
+          sh "echo 'Variable: ${myVariable}'"
         }
       }
     }
   }
 }
+
