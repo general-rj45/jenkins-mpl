@@ -1,6 +1,7 @@
 def call(body) {
   def MPL = MPLPipelineConfig(body, [
     agent_label: '',
+    variables: '',
   ])
   pipeline {
     agent {
@@ -9,7 +10,7 @@ def call(body) {
     stages {
       stage( 'Test' ) {
         steps {
-          sh "echo 'lol'"
+          sh "echo '${variables}'"
         }
       }
     }
