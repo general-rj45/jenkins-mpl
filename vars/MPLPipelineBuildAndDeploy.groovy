@@ -9,7 +9,7 @@ def call(body, String myVariable) {
     stages {
       stage( 'Test' ) {
         steps {
-          sh "echo 'Variable: ${myVariable}'"
+          sh "echo 'test'"
         }
       }
     }
