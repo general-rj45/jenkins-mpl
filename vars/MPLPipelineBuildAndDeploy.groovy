@@ -9,7 +9,7 @@ def call(body) {
     stages {
       stage( 'Test' ) {
         steps {
-          sh "env"
+          sh "echo CFG.'appName'"
         }
       }
     }
