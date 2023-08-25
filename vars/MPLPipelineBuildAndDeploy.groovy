@@ -1,3 +1,7 @@
+import com.griddynamics.devops.mpl.Helper
+import com.griddynamics.devops.mpl.MPLManager
+import com.griddynamics.devops.mpl.MPLModuleException
+
 def call(body) {
   def MPL = MPLPipelineConfig(body, [
     agent_label: '',
