@@ -9,7 +9,7 @@ def call(body) {
     stages {
       stage( 'Test' ) {
         steps {
-          println(CFG.'appName')
+          println(CFG.appName)
         }
       }
     }
